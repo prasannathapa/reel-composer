@@ -15,6 +15,7 @@ interface EditorViewProps {
   onGenerate: () => void;
   onUpdate: (content: GeneratedContent) => void;
   videoFile: File | null;
+  bgMusicFile?: File | null;
   topicContext: string;
   onTopicContextChange: (text: string) => void;
   srtText: string;
@@ -52,6 +53,7 @@ export const EditorView: React.FC<EditorViewProps> = ({
   onGenerate,
   onUpdate,
   videoFile,
+  bgMusicFile,
   topicContext,
   onTopicContextChange,
   srtText,
@@ -97,6 +99,8 @@ export const EditorView: React.FC<EditorViewProps> = ({
           subtitleBgColor={subtitleBgColor}
           subtitlePaddingX={subtitlePaddingX}
           subtitlePaddingY={subtitlePaddingY}
+          videoFile={videoFile}
+          bgMusicFile={bgMusicFile}
         />
       </div>
 

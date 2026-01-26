@@ -362,6 +362,7 @@ const App: React.FC = () => {
                   onGenerate={handleGenerate}
                   onUpdate={setGeneratedContent}
                   videoFile={videoFile}
+                  bgMusicFile={bgMusicFile}
                   topicContext={topicContext}
                   onTopicContextChange={setTopicContext}
                   srtText={srtTextRaw}

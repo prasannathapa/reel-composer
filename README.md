@@ -54,17 +54,32 @@ The built-in editor allows you to tweak the code.
 *   *Workflow Tip:* If the animation isn't quite right, copy the generated code, paste it into **ChatGPT/Claude/Gemini**, and say: *"Make the particles faster"* or *"Change the color to green"*. Paste the updated code back into the Editor Panel.
 
 ### 5. Export
-Record the final composition directly from the browser to get a polished `.webm` or `.mp4` file ready for social media.
-*   *Recommended Tool:* **[OBS Studio](https://obsproject.com/)** or standard screen recording software to capture the playback.
+Export your reel in high quality (1080×1920 Instagram Reel format) using the built-in **FFmpeg Export** feature:
+*   Click **"Export HD"** button
+*   The server will render your video with subtitles and background music
+*   Download the final `.mp4` file ready for Instagram/TikTok/YouTube Shorts
 
 ---
 
 ## 🚀 Getting Started
 
-This is a pure frontend application. No backend server is required.
-
 ### Prerequisites
 *   Node.js (v18+)
+*   **FFmpeg** (required for HD export feature)
+
+### Install FFmpeg
+
+**macOS:**
+```bash
+brew install ffmpeg
+```
+
+**Ubuntu/Debian:**
+```bash
+sudo apt install ffmpeg
+```
+
+**Windows:** Download from [ffmpeg.org](https://ffmpeg.org/download.html)
 
 ### Installation
 
@@ -72,11 +87,20 @@ This is a pure frontend application. No backend server is required.
 # Clone the repository
 git clone https://github.com/prasannathapa/reel-composer.git
 
-# Install dependencies
+# Install dependencies (includes server dependencies)
 npm install
 
-# Run the development server
+# Run both frontend and export server
+npm start
+```
+
+Or run separately:
+```bash
+# Terminal 1 - Frontend only
 npm run dev
+
+# Terminal 2 - Export server (for HD export feature)
+npm run server
 ```
 
 ### API Key Configuration
